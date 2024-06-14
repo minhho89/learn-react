@@ -1,11 +1,16 @@
 import React from 'react';
+import UserCard from "../../shared/components/UserCard";
 
 const UserItem = (props) => {
-    return <>
-        <div><img src={props.image} alt={props.id}/></div>
-        <div><h2>{props.name}</h2></div>
-        <div><h2>{props.placeCount}</h2></div>
-    </>
+    return (
+        <UserCard
+            key={props.id}
+            id={props.id}
+            image={props.image}
+            name={props.name}
+            placeCount={props.placeCount}
+            />
+    );
 }
 
 export default UserItem;

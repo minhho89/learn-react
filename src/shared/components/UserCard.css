@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 250px;
+    margin: 30px;
+    background-color: rgb(247, 223, 30);
+    align-items: center;
+    border-radius: 30px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info--title {
+    font-size: xx-large;
+    font-family: "American Typewriter", serif;
+}
+
+.card-info--details {
+    font-weight: bolder;
+    font-size: medium;
+}
