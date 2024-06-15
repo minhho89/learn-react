@@ -2,8 +2,9 @@ import React from 'react';
 import UserItem from "./UserItem";
 
 const UserList = (props) => {
-    return (
-       <ul>
+    return props.items.length === 0
+        ? (<h2>No users found</h2>)
+       : (<ul>
            {
                props.items.map(user => {
                    return (
@@ -20,8 +21,7 @@ const UserList = (props) => {
                }
                )
            }
-       </ul>
-    );
+       </ul>)
 }
 
 export default UserList;
