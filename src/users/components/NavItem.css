@@ -1,0 +1,8 @@
+.navItem {
+    margin: 10px;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: white;
+}

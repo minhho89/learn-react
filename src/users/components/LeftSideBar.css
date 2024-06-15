@@ -1,0 +1,14 @@
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.5s;
+    background-color: bisque;
+}
+
+aside.open {
+    width: 70%;
+}
