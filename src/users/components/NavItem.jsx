@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import './NavItem.css';
 
-const NavItem = () => {
+const NavItem = (props) => {
     const navItems = {
         'ALL USERS': '/',
         'MY PLACES': '/places',
@@ -10,7 +10,7 @@ const NavItem = () => {
         'AUTHENTICATE': '/authenticate'};
 
     return (
-    <ul>
+    <ul id={props.id}>
         {
             Object.entries(navItems).map(([item, link], index) => (
                 <li key={index} className="navItem">

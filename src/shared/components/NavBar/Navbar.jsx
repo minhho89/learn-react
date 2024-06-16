@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
         <LeftSideBar isOpen={isSidebarOpen}/>
 
-        <NavItem />
+        <NavItem  id="navbar-item"/>
     </nav>
 }
 

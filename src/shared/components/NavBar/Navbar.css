@@ -34,9 +34,24 @@
     list-style: none;
 }
 
+@media (min-width: 769px) {
+    #sidebar-item {
+        display: none;
+    }
+
+    #navbar-item {
+        display: flex;
+    }
+
+}
+
 
 @media (max-width: 768px) {
-    .navbar ul {
+    #sidebar-item {
+        display: block;
+    }
+
+    #navbar-item {
         display: none;
     }
 
