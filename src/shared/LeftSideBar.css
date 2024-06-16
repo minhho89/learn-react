@@ -1,0 +1,51 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.base_layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+aside {
+    position: fixed;
+    display: flex;
+    background-color: goldenrod;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s;
+}
+
+.container.open {
+    width: 100%;
+}
+
+.container.open aside {
+    width: 70%;
+}
+
+.container.open .base_layer {
+    width: 100%;
+}
+
+
+
+/*.container:not(.open) {*/
+/*    width: 0;*/
+/*}*/

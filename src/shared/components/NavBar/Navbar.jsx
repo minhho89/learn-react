@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import './Navbar.css'
-import NavItem from "../../../users/components/NavItem";
-import LeftSideBar from "../../../users/components/LeftSideBar";
+import NavItem from "../../NavItem";
+import LeftSideBar from "../../LeftSideBar";
 const Navbar = () => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,7 +20,9 @@ const Navbar = () => {
         <div className="logo">
             <h1>YourPlaces</h1>
         </div>
-        <LeftSideBar isOpen={isSidebarOpen}/>
+        <LeftSideBar isOpen={isSidebarOpen}
+        toggleIsOpen={toggleSidebar}
+        />
 
         <NavItem  id="navbar-item"/>
     </nav>
