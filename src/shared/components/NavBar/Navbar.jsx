@@ -6,9 +6,14 @@ import LeftSideBar from "../../LeftSideBar";
 const Navbar = () => {
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [activeItem, setActiveItem] = useState('ALL USERS'); // New state
 
     const toggleSidebar = () => {
        setIsSidebarOpen(prevState => !prevState);
+    }
+
+    const handleItemClick = (item) => {
+        setActiveItem(item);
     }
 
     return <nav className="navbar">
@@ -22,9 +27,11 @@ const Navbar = () => {
         </div>
         <LeftSideBar isOpen={isSidebarOpen}
         toggleIsOpen={toggleSidebar}
+                     activeItem={activeItem}
+                     onItemClicked={handleItemClick}
         />
 
-        <NavItem  id="navbar-item"/>
+        <NavItem isSidebarOpen={isSidebarOpen} activeItem={activeItem} id="navbar-item" onItemClicked={handleItemClick}/>
     </nav>
 }
 

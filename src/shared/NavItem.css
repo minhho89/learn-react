@@ -6,3 +6,32 @@
     text-decoration: none;
     color: white;
 }
+
+
+.navItem .active {
+    border: 1px solid lightyellow;
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 10px;
+    color: red;
+    transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+    .navItem {
+        display: none;
+    }
+
+    .open .navItem {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .navItem {
+        display: block;
+    }
+}
+
