@@ -1,11 +1,22 @@
 import React from 'react';
 import PlaceItem from "./PlaceItem";
 
-const PlaceList = () => {
+const PlaceList = (props) => {
+
     return <>
-        <PlaceItem />
-        <PlaceItem />
-        <PlaceItem />
+        {props.items.map(place => (
+            <PlaceItem
+                key={place.id}
+                id = {place.id}
+                image= {place.imageURL}
+                title={place.title}
+                address={place.address}
+                description={place.description}
+                creatorId={place.creatorId}
+                coordinate={place.coordinate} />
+                )
+            )
+        }
     </>
 
 }
