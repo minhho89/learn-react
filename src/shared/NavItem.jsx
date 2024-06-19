@@ -1,25 +1,27 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import './NavItem.css';
 
 const NavItem = (props) => {
     const navItems = {
         'ALL USERS': '/',
-        'MY PLACES': '/places',
+        'MY PLACES': `/${props.uid}/places`,
         'ADD PLACES': '/places/new',
         'AUTHENTICATE': '/authenticate'};
-
+    const location = useLocation();
     return (
     <ul id={props.id} className={props.isSidebarOpen ? 'open' : ''}>
         {
-            Object.entries(navItems).map(([item, link], index) => (
-                <li
-                    key={index}
-                    className={`navItem ${props.activeItem === item ? 'active' : ''} `}
-                    onClick={() =>  props.onItemClicked(item)}>
-                    <NavLink to={link} exact>{item}</NavLink>
-                </li>
-            ))
+            Object.entries(navItems).map(([item, link], index) => {
+                return (
+                    <li
+                        key={index}
+                        className={location.pathname === link ? 'navItem active' : 'navItem'}
+                        onClick={() =>  props.onItemClicked(item)}>
+                        <NavLink to={link}>{item}</NavLink>
+                    </li>
+                )
+            })
         }
     </ul>
     );

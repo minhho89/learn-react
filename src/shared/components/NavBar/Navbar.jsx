@@ -31,7 +31,8 @@ const Navbar = () => {
                      onItemClicked={handleItemClick}
         />
 
-        <NavItem isSidebarOpen={isSidebarOpen} activeItem={activeItem} id="navbar-item" onItemClicked={handleItemClick}/>
+        <NavItem isSidebarOpen={isSidebarOpen} activeItem={activeItem} id="navbar-item" uid="1"
+                 onItemClicked={handleItemClick}/>
     </nav>
 }
 

@@ -16,7 +16,7 @@ const LeftSideBar = (props) => {
                 onClick={closePanel}
                 className="base_layer"></div>
             <aside>
-                <NavItem id="sidebar-item"
+                <NavItem id="sidebar-item" uid="1"
                     onItemClicked={props.onItemClicked}
                 />
             </aside>
