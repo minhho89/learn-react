@@ -10,7 +10,7 @@ const Card = (props) => {
             <div className="card-description">{props.description}</div>
             <div className="card-control-panel">
                 {props.controls.map(control =>
-                    <button>{control}</button>
+                    <>{control}</>
                 )}
             </div>
 

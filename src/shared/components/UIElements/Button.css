@@ -1,0 +1,36 @@
+button {
+    padding: 10px 20px;
+    background-color: rgba(233,30,99,1);
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgba(112, 17, 50, 1);
+    color: white;
+    cursor: pointer;
+}
+
+.inverse {
+    background-color: transparent;
+    color: rgba(233,30,99,1);
+    border: solid rgba(233,30,99,1) 1px
+}
+
+.inverse:hover {
+    background-color: rgba(233,30,99,1);
+    color: white;
+    border: solid white 1px;
+}
+
+.danger {
+    background-color: rgb(112, 17, 50);
+}
+
+.danger:hover {
+    background-color: rgba(233,30,99,1);
+    color: white;
+}
