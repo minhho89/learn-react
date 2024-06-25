@@ -11,8 +11,8 @@ const placeList = [
         description: "The Rex Hotel in Ho Chi Minh City, Vietnam, is a historic five-star hotel renowned for its elegant architecture, luxurious amenities, and central location, making it a symbol of the city's rich cultural heritage.",
         creatorId: '1',
         coordinate: {
-            lat: 10.7755202,
-            long: 106.6984223
+            lat: 10.7757473,
+            long: 106.7003803
         }
     },
     {

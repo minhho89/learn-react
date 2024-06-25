@@ -24,7 +24,7 @@ const PlaceItem = (props) => {
                     <Button text='EDIT' />,
                     <Button className="danger" text='DELETE' />]}
             ></Card>
-            <Modal show={showModal}  title={props.title} coordinate={props.coordinate} />
+            <Modal show={showModal}  title={props.title} coordinate={props.coordinate} onClose={toggleModal} />
         </>
 
     )
