@@ -13,6 +13,7 @@ import VectorSource from 'ol/source/Vector';
 import VectorLayer from 'ol/layer/Vector';
 import Style from 'ol/style/Style';
 import Icon from 'ol/style/Icon';
+import ReactDOM from "react-dom";
 
 const Modal = (props) => {
     const mapContainer = useRef(null);
@@ -64,18 +65,18 @@ const Modal = (props) => {
         return null;
     }
 
-    return (
-        <div className='modal-backdrop'>
-            <div className='modal'>
-                <div className="header">{props.title}</div>
-                <div  ref={mapContainer} className="map"></div>
-                <div className="controls">
-                    <Button text="CLOSE" onClick={props.onClose}/>
-                </div>
+    return ReactDOM.createPortal(
+            <div className='modal-backdrop'>
+                <div className='modal'>
+                    <div className="header">{props.title}</div>
+                    <div ref={mapContainer} className="map"></div>
+                    <div className="controls">
+                        <Button text="CLOSE" onClick={props.onClose}/>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    );
+        , document.getElementById('modal-root'));
 }
 
 export default Modal;

@@ -3,6 +3,7 @@ import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/UIElements/Button";
 import '../../shared/components/UIElements/Button.css'
 import Modal from "../../shared/components/UIElements/Modal";
+import { createPortal } from 'react-dom';
 
 const PlaceItem = (props) => {
 
